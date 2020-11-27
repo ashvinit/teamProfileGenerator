@@ -45,36 +45,31 @@ function appMenu() {
             createTeam();
         });
     }
-
-  function createTeam() {
-
-    inquirer.prompt([
-      {
-        type: "list",
-        name: "memberChoice",
-        message: "Which type of team member would you like to add?",
-        choices: [
-          "Engineer",
-          "Intern",
-          "I don't want to add any more team members"
-        ]
-      }
-    ]).then(userChoice => {
-      switch(userChoice.memberChoice) {
-      case "Engineer":
-        addEngineer();
-        break;
-      case "Intern":
-        addIntern();
-        break;
-      default:
-        buildTeam();
-      }
-    });
-  }
-
-  function addEngineer() {
-    inquirer.prompt([
+    
+    function createTeam() {
+        inquirer.prompt([
+            {
+                type: "list",
+                name: "memberChoice",
+                message: "Which type of team member would you like to add?",
+                choices: ["Engineer", "Intern", "I don't want to add any more team members"]
+            }
+        ]).then(userChoice => {
+            switch(userChoice.memberChoice) {
+                case "Engineer":
+                    addEngineer();
+                    break;
+                    case "Intern":
+                        addIntern();
+                        break;
+                        default:
+                            buildTeam();
+                        }
+                    });
+                }
+                
+                function addEngineer() {
+                    inquirer.prompt([
       //
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
