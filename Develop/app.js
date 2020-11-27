@@ -97,14 +97,30 @@ function appMenu() {
                         createTeam();
                     });
                 }
-
-  function addIntern() {
-    inquirer.prompt([
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
-    ]).then(answers => {
+                
+                function addIntern() {
+                    inquirer.prompt([
+                        {
+                            type: 'input',
+                            name: 'internName',
+                            message: 'What is your name?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'internId',
+                            message: 'What is your ID number?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'internEmail',
+                            message: 'What is your email address?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'internSchool',
+                            message: 'What is the name of your school?'
+                        }
+                    ]).then(answers => {
       //
       // YOUR CODE HERE
       // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
