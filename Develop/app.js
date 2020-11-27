@@ -26,7 +26,7 @@ function appMenu() {
             {
                 type: 'input',
                 name: 'managerId',
-                message: 'What is your Id number?'
+                message: 'What is your ID number?'
             },
             {
                 type: 'input',
@@ -70,11 +70,27 @@ function appMenu() {
                 
                 function addEngineer() {
                     inquirer.prompt([
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
-    ]).then(answers => {
+                        {
+                            type: 'input',
+                            name: 'engineerName',
+                            message: 'What is your name?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'engineerId',
+                            message: 'What is your ID number?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'engineerEmail',
+                            message: 'What is your email address?'
+                        },
+                        {
+                            type: 'input',
+                            name: 'engineerGithub',
+                            message: 'What is your github username?'
+                        }
+                    ]).then(answers => {
       //
       // YOUR CODE HERE
       // 1. CREATE A VARIABLE TO STORE THE ENGINEER OBJECT INSTANTIATED WITH THE ENGINEER CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
