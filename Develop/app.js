@@ -121,17 +121,12 @@ function appMenu() {
                             message: 'What is the name of your school?'
                         }
                     ]).then(answers => {
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE INTERN CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-      // 
-
-      createTeam();
-    });
-  }
+                        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+                        teamMembers.push(intern);
+                        idArray.push(answers.internId);
+                        createTeam();
+                    });
+                }
 
   function buildTeam() {
     // Create the output directory if the output path doesn't exist
