@@ -139,7 +139,6 @@ function appMenu() {
                     writeFileAsync(outputPath, render(teamMembers), "utf-8")
                     .then(() => console.log('Successfully wrote to team.html'))
                     .catch((err) => console.error(err));
-
                 }
                 
                 createManager();
