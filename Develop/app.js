@@ -36,7 +36,7 @@ function appMenu() {
             {
                 type: 'input',
                 name: 'managerOfficeNumber',
-                type: 'What is your office phone number?'
+                message: 'What is your office phone number?'
             }
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
@@ -127,8 +127,8 @@ function appMenu() {
                         createTeam();
                     });
                 }
-
-  function buildTeam() {
+                
+                function buildTeam() {
     // Create the output directory if the output path doesn't exist
     if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR)
